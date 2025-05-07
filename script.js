@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     mensaje += `%0ATotal: $${totalPrecio.toLocaleString()}%0ATiempo estimado: ${formatearTiempo(totalTiempo)}`;
 
-    const numeroWhatsApp = "5493401596469";  // Cambia por tu número de WhatsApp
-    whatsappBtn.href = `https://wa.me/${5493401596469}?text=${mensaje}`;
+    const numeroWhatsApp = "https://wa.me/5493401510995";  // Cambia por tu número de WhatsApp
+    whatsappBtn.href = `https://wa.me/5493401510995?text=${mensaje}`;
   }
 
   // Función para eliminar un item del carrito
