@@ -87,3 +87,19 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizarCarrito(); // Actualizar la lista y los totales
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.toggle-servicio').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const sub = btn.nextElementSibling;
+      sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+});
+
+document.querySelectorAll(".accordion-header").forEach(button => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  });
+});
