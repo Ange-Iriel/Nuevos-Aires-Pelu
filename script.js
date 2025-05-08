@@ -8,7 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let carrito = [];
 
-  // Función para formatear los tiempos de minutos a horas y minutos.
+  // Convierte un texto como "1 hs 30 min" a minutos
+  function obtenerTiempoEnMinutos(texto) {
+    const horas = parseInt((texto.match(/(\d+)\s*hs/) || [0, 0])[1]);
+    const minutos = parseInt((texto.match(/(\d+)\s*min/) || [0, 0])[1]);
+    return horas * 60 + minutos;
+  }
+
+  // Formatea minutos a "X hs Y min"
   function formatearTiempo(minutos) {
     const horas = Math.floor(minutos / 60);
     const minutosRestantes = minutos % 60;
@@ -22,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Agregar servicio al carrito
+  // Agrega un servicio al carrito
   botonesAgregar.forEach(boton => {
     boton.addEventListener('click', () => {
       const servicio = boton.closest('.service-item');
@@ -31,19 +38,22 @@ document.addEventListener('DOMContentLoaded', () => {
       const tiempoTexto = servicio.querySelector('.service-time').textContent;
 
       const precio = parseInt(precioTexto.replace(/\D/g, ''));
-      const tiempo = tiempoTexto.includes("hs")
-        ? parseInt(tiempoTexto.replace(/\D/g, '')) * 60
-        : parseInt(tiempoTexto.replace(/\D/g, ''));
+      const tiempo = obtenerTiempoEnMinutos(tiempoTexto);
 
       carrito.push({ nombre, precio, tiempo });
-
       actualizarCarrito();
     });
   });
 
-  // Actualizar el carrito y los totales
+  // Elimina un ítem del carrito
+  function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    actualizarCarrito();
+  }
+
+  // Actualiza la UI del carrito
   function actualizarCarrito() {
-    carritoSeccion.style.display = 'block';
+    carritoSeccion.style.display = carrito.length > 0 ? 'block' : 'none';
     listaCarrito.innerHTML = '';
 
     let totalPrecio = 0;
@@ -53,13 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const li = document.createElement('li');
       li.textContent = `${item.nombre} - $${item.precio.toLocaleString()} - ${formatearTiempo(item.tiempo)}`;
 
-      // Crear botón de eliminar
       const eliminarBtn = document.createElement('button');
       eliminarBtn.textContent = 'Eliminar';
       eliminarBtn.classList.add('eliminar-item');
+      eliminarBtn.setAttribute('aria-label', `Eliminar ${item.nombre}`);
       eliminarBtn.addEventListener('click', () => eliminarDelCarrito(index));
 
-      // Agregar el botón de eliminar al item
       li.appendChild(eliminarBtn);
       listaCarrito.appendChild(li);
 
@@ -69,37 +78,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     totalPrecioEl.textContent = `$${totalPrecio.toLocaleString()}`;
     totalTiempoEl.textContent = formatearTiempo(totalTiempo);
+    actualizarWhatsApp(totalPrecio, totalTiempo);
+  }
 
-    // Actualizar mensaje de WhatsApp
+  // Genera el enlace de WhatsApp con el resumen del carrito
+  function actualizarWhatsApp(totalPrecio, totalTiempo) {
     let mensaje = "Hola! Me gustaría solicitar los siguientes servicios:%0A";
     carrito.forEach(item => {
       mensaje += `• ${item.nombre} - $${item.precio.toLocaleString()} - ${formatearTiempo(item.tiempo)}%0A`;
     });
     mensaje += `%0ATotal: $${totalPrecio.toLocaleString()}%0ATiempo estimado: ${formatearTiempo(totalTiempo)}`;
 
-    const numeroWhatsApp = "https://wa.me/5493401510995";  // Cambia por tu número de WhatsApp
     whatsappBtn.href = `https://wa.me/5493401510995?text=${mensaje}`;
   }
 
-  // Función para eliminar un item del carrito
-  function eliminarDelCarrito(index) {
-    carrito.splice(index, 1); // Eliminar el servicio en la posición indicada
-    actualizarCarrito(); // Actualizar la lista y los totales
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
+  // Mostrar/ocultar secciones tipo toggle
   document.querySelectorAll('.toggle-servicio').forEach(btn => {
     btn.addEventListener('click', () => {
       const sub = btn.nextElementSibling;
       sub.style.display = sub.style.display === 'block' ? 'none' : 'block';
     });
   });
-});
 
-document.querySelectorAll(".accordion-header").forEach(button => {
-  button.addEventListener("click", () => {
-    const content = button.nextElementSibling;
-    content.style.display = content.style.display === "block" ? "none" : "block";
+  // Acordeón para mostrar contenido colapsable
+  document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
   });
 });
