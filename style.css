@@ -36,6 +36,14 @@ h2{
   align-items: center;
     text-align: center;
 }
+h4{
+  font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /*según la variante */
+    font-style: normal;
+    font-size: 25px;
+    color: #94c9f5;
+}
 .navbarH2{
     margin: 20px;
     font-family: "Parkinsans", sans-serif;
@@ -173,7 +181,48 @@ h2{
     }
   }
 
-
+  .carrito-flotante {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 250px;
+    background-color: #2e2e2e;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    z-index: 999;
+    font-family: "Quicksand", sans-serif;
+    color: white;
+  }
+  
+  .carrito-flotante h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .carrito-flotante ul {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .carrito-flotante button {
+    width: 100%;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .carrito-flotante button:hover {
+    background-color: #1ebc5b;
+  }
  
 
 /* Estilo para los items de servicio */
@@ -367,10 +416,19 @@ h2{
 #lista-carrito {
   list-style: none;
   padding: 0;
+  margin: 0;
+  max-height: 300px; /* o lo que quieras */
+  overflow-y: auto;
+  overflow-x: hidden; /* <-- esto evita el scroll horizontal */
+  word-wrap: break-word; /* para evitar que el texto largo cree overflow */
 }
 
 #lista-carrito li {
-  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* permite que los elementos se ajusten si son muy anchos */
+  padding: 8px 0;
 }
 
 #whatsapp-btn button {
@@ -387,45 +445,4 @@ h2{
   background-color: #1ebc57;
 }
 
-.carrito-flotante {
-  position: fixed;
-  top: 100px;
-  right: 20px;
-  width: 250px;
-  background-color: #2e2e2e;
-  border: 2px solid #444;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-  z-index: 999;
-  font-family: "Quicksand", sans-serif;
-  color: white;
-}
 
-.carrito-flotante h2 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.carrito-flotante ul {
-  list-style: none;
-  padding: 0;
-  max-height: 150px;
-  overflow-y: auto;
-}
-
-.carrito-flotante button {
-  width: 100%;
-  background-color: #25D366;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.carrito-flotante button:hover {
-  background-color: #1ebc5b;
-}

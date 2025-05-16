@@ -2,41 +2,323 @@
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@400&display=swap');
 
 body {
-  background-color: #1f2629;
-  color: #e0fde7;
-  margin: 0;
-  font-family: "Poiret One", sans-serif;
+    background-color: #1f2629;
+    color: rgb(224, 253, 231);
+}
+.navbarH2 h2{
+    margin: 50px,10px,10px;
+    font-family: "Parkinsans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500; /*según la variante */
+    font-style: normal;
+    font-size: 35px;
+    display: flex;
+  justify-content: center; 
+  align-items: center;
+    text-align: center;
 }
 
-.contact-section {
-  background: #111;
-  color: #fff;
-  padding: 60px 20px;
+.navbarH2 a {
+  text-decoration: none;
+  color: inherit; 
+  
+}
+
+/*h2, h3, h4 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}*/
+
+/*h1*/
+.parkinsans-regular {
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 400;
+}
+
+/*h3*/
+.quicksand {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+}
+
+/* Navbar */
+.navbarH2 {
+    margin: 20px;
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 400;
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-section{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    justify-content: baseline;
+}
+
+.contact-section h2{
+    font-size: 40px;
+}
+.contact-section p{
+    font-size: 20px;
+}
+/* Persona */
+.persona {
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #121213;
+      font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.persona img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.persona-info {
+        font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+hr {
+    margin: 40px 0;
+    border: 1px solid #ccc;
+}
+
+/*boton reseña*/
+
+.reseñas {
   text-align: center;
 }
 
-.contact-header h1 {
-  font-size: 48px;
-  color: #fff;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  font-family: "Quicksand", sans-serif; /* Aseguramos que se aplique */
+.boton-reseñas {
+  padding: 14px 32px;
+  font-size: 20px;
+  background-color: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact-header p {
-  font-size: 16px;
-  color: #aaa;
-  max-width: 600px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  font-family: "Poiret One", sans-serif; /* Aseguramos que se aplique */
+.boton-reseñas:hover {
+  background-color: #1f2937;
+  transform: scale(1.03);
 }
 
-.gallery-parr{
-    font-size: 16px;
-  color: #aaa;
-  max-width: 600px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  font-family: "Poiret One", sans-serif;
+/*seccion color-ciencia-cuidado*/
+
+.color-ciencia-cuidado{
+     font-family: "Poiret One", sans-serif;
+    text-align: center;
+    justify-content: baseline;
+    font-weight: 400;
+    font-size: 35px;
 }
+/*DESCRIPCION SERVICIO*/
+.descripcion_servicio{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    justify-content: baseline;
+}
+/* ANIMACIÓN CON SCROLL (opcional para JS) */
+.cuadro.reveal::before {
+  bottom: 0;
+}
+/*reseñas*/
+.carrusel-reseñas {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    text-align: center;
+    justify-content: baseline;
+}
+
+.reseña{
+    font-size: 18px;
+    margin: 15px;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 500;
+}
+
+.reseña h2{
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 400;
+    font-size: 27px;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  cursor: pointer;
+  position: absolute;
+  color: var(--color-white);
+  font-size: 3rem;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+ul,
+li {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel {
+  width: 90%;
+  max-width: 900px;
+  height: auto;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+
+.carousel_slider {
+  width: 100%;
+  height: 87%;
+  overflow: hidden;
+  position: relative;
+}
+
+.content_inner_slider {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.img {
+  min-width: 50vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev_button {
+  left: 0;
+}
+
+.next_button {
+  right: 0;
+}
+
+.dots {
+  display: none;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid var(--color-text-light);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.form {
+  display: none;
+}
+
+.auto_slide {
+}
+
+
+
+/* Footer */
+.footer {
+    margin-top: 25px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    transform: scale(1.2);
+    color: #5d5e8b;
+}
+
+.footer-credit {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Cuadros en estilo */
+.cuadro {
+    display: block;
+    position: relative;
+    background-color: #4e5b62;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s ease;
+}
+
+.cuadro:hover {
+    background-color: #5c6d73;
+}
+
+.cuadro::after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    visibility: hidden;
+    color: white;
+}
+
+

@@ -1,0 +1,168 @@
+body {
+    background-color: #1f2629;
+    color: rgb(224, 253, 231);
+}
+h1, h2 {
+  text-align: center;
+  margin-top: 40px;
+  color:rgb(224, 253, 231);
+}
+
+/* --------- CARRUSEL DE RESEÑAS --------- */
+.carrusel-reseñas {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+.slider-reseñas {
+  display: flex;
+  animation: deslizar 36s infinite linear;
+  width: calc(600px * 6); /* 6 reseñas */
+}
+
+.reseña {
+  flex: 0 0 100%;
+  max-width: 600px;
+  background-color: #1f2629;
+  border-left: 4px solid #007BFF;
+  margin: 0 10px;
+  padding: 30px;
+  border-radius: 10px;
+  font-style: italic;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.reseña span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+}
+
+.carrusel-reseñas {
+  max-width: 600px;
+  margin: 0 auto 60px;
+  overflow: hidden;
+  position: relative;
+  padding: 20px;
+}
+
+.slider-reseñas {
+  display: flex;
+  transition: transform 3s ease-in-out;
+  width: 600%;
+}
+
+.reseña {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  white-space: normal;
+  word-break: break-word;
+  min-height: 100px;
+}
+
+.carrusel-reseñas {
+  overflow: hidden; /* Está bien para ocultar las demás reseñas */
+  padding: 20px;
+  max-width: 90%;
+  margin: auto;
+}
+
+.reseña span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #c7c4c4;
+}
+
+
+
+
+/* --------- GALERÍA --------- */
+.galeria {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.contenedor-galeria {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.tarjeta {
+  flex: 0 0 300px;
+  background-color:#1f2629;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(253, 251, 251, 0.1);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta img {
+  width: 100%;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.tarjeta h3 {
+  margin: 15px;
+  font-size: 18px;
+  color: #fafafa;
+}
+
+.tarjeta p {
+  margin: 0 15px 15px;
+  font-size: 14px;
+  color: #e2e2e2;
+}
+
+/* Ocultar scroll horizontal visual, pero mantenerlo funcional */
+.contenedor-galeria {
+  scrollbar-width: none;      /* Firefox */
+  -ms-overflow-style: none;   /* IE y Edge */
+}
+
+.contenedor-galeria::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Edge Chromium */
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 1.3rem;
+  }
+
+  .reseña {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .trabajo h3 {
+    font-size: 1rem;
+  }
+
+  .trabajo p {
+    font-size: 0.85rem;
+  }
+
+  .boton-reseñas {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+}
