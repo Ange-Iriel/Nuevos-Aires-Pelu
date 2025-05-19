@@ -398,6 +398,7 @@ h4{
   margin: 3rem;
   display: flex;
   justify-content: space-around;
+  
 }
 
     .cuadro {
@@ -459,6 +460,15 @@ h4{
     .cuadro:hover .frase {
       opacity: 1;
     }
+
+
+    .cuadro.activo .texto-frontal {
+  opacity: 0;
+}
+
+.cuadro.activo .frase {
+  opacity: 1;
+}
 
     .final{
       display: flex;
@@ -674,4 +684,81 @@ h4{
     flex-direction: column;
     gap: 10px;
   }
+}
+
+
+@media (max-width: 600px) {
+  .cuadrados {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 1rem;
+  }
+
+  .cuadro {
+    width: 90%;
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-content {
+    gap: 10px;
+  }
+
+  .footer-credit {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .quienesSomos {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .accordion-header {
+    font-size: 1rem;
+  }
+
+  .accordion-content {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .add-to-cart {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .cuadro .frase {
+    font-size: 18px;
+    bottom: 10px;
+  }
+
+  .final {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+
+h1, h2, h4, .navbarH2 {
+  font-family: "Parkinsans", sans-serif;
+}
+
+h3, .navbarh3, .rutas_links, .final, .cuadro, .accordion, .footer {
+  font-family: "Quicksand", sans-serif;
+}
+
+.buttonQuienesSomos, .botton_turnoyprecio a {
+  font-family: "Montserrat", sans-serif;
 }

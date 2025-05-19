@@ -331,6 +331,32 @@ h4{
   text-align: center; 
 }
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
+
+
 /* Footer */
 .footer {
     margin-top: 25px;
@@ -394,4 +420,140 @@ h4{
     color: white;
 }
 
+/* ============================= */
+/* 🟦 RESPONSIVE DESIGN GENERAL */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .navbarH2 {
+    font-size: 40px;
+  }
+
+  .presentacion p, .presentacion h3 {
+    font-size: 25px;
+  }
+
+  .dueños1 h3 {
+    font-size: 28px;
+  }
+
+  .dueños1 p {
+    font-size: 22px;
+  }
+
+  .quienesTexto {
+    font-size: 1.8rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  body {
+    margin: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbarH2 {
+    font-size: 30px;
+    margin: 0.5rem 0;
+  }
+
+  .navbarh3 {
+    font-size: 16px;
+  }
+
+  .quienesSomos {
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .quienesTexto {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .buttonQuienesSomos {
+    justify-content: center;
+    padding: 10px 30px;
+  }
+
+  .rutas_links {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .presentacion {
+    margin: 2rem 1rem;
+  }
+
+  .presentacion h3 {
+    font-size: 24px;
+  }
+
+  .presentacion p {
+    font-size: 20px;
+  }
+
+  .presentacion2 {
+    font-size: 20px;
+    flex-direction: column;
+  }
+
+  .presentacion2 p {
+    margin: 2rem 1rem;
+    font-size: 18px;
+  }
+
+  .footer a {
+    font-size: 1.2rem;
+  }
+
+  .cuadro {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .navbarH2 {
+    font-size: 24px;
+  }
+
+  .quienesTexto {
+    font-size: 1.2rem;
+  }
+
+  .presentacion p,
+  .presentacion h3 {
+    font-size: 18px;
+  }
+
+  .dueños1 {
+    padding: 1rem;
+  }
+
+  .dueños1 h3 {
+    font-size: 22px;
+  }
+
+  .dueños1 p {
+    font-size: 18px;
+  }
+
+  .cuadro {
+    width: 60px;
+    height: 60px;
+  }
+}
 

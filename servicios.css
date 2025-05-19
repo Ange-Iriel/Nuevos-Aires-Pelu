@@ -221,9 +221,6 @@ h4{
   font-size: 30px;
 }
 
-.descripcion{
-    
-}
 
 .descripcion h3{
     font-size: 30px;
@@ -277,4 +274,190 @@ h4{
   margin-top: 10px;
   font-size: 0.9rem;
   color: #aaa;
+}
+
+/* -------------------- Responsive general -------------------- */
+@media (max-width: 1024px) {
+  body {
+    margin: 1.5rem;
+  }
+
+  .navbarH2 {
+    font-size: 48px;
+  }
+
+  .rutas_links {
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    gap: 1rem;
+  }
+
+  .quienesSomos {
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .quienesTexto,
+  .textoQuienesSomos {
+    font-size: 1.8rem;
+  }
+
+  .exposcion h3 {
+    font-size: 32px;
+  }
+
+  .exposcion p {
+    font-size: 24px;
+    margin: 2rem;
+  }
+
+  .descripcion h3 {
+    font-size: 26px;
+  }
+
+  .descripcion p {
+    font-size: 22px;
+  }
+
+  .footer a {
+    font-size: 14px;
+  }
+
+  .footer-credit {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarH2 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .quienesTexto,
+  .textoQuienesSomos {
+    font-size: 1.5rem;
+  }
+
+  .buttonQuienesSomos {
+    padding: 10px 32px;
+    font-size: 14px;
+    justify-content: center;
+  }
+
+  .rutas_links {
+    font-size: 16px;
+  }
+
+  .exposcion h3 {
+    font-size: 26px;
+    margin: 2rem;
+  }
+
+  .exposcion p {
+    font-size: 20px;
+    margin: 2rem;
+  }
+
+  .descripcion h3 {
+    font-size: 22px;
+  }
+
+  .descripcion p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 1rem;
+  }
+
+  .navbarH2 {
+    font-size: 28px;
+  }
+
+  .quienesTexto,
+  .textoQuienesSomos {
+    font-size: 1.3rem;
+  }
+
+  .buttonQuienesSomos {
+    font-size: 12px;
+    padding: 8px 24px;
+  }
+
+  .rutas_links {
+    font-size: 14px;
+    gap: 0.5rem;
+  }
+
+  .exposcion h3 {
+    font-size: 22px;
+  }
+
+  .exposcion p {
+    font-size: 18px;
+  }
+
+  .descripcion h3 {
+    font-size: 20px;
+  }
+
+  .descripcion p {
+    font-size: 16px;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .footer-content {
+    gap: 10px;
+  }
+
+  .footer a {
+    font-size: 13px;
+  }
+
+  .footer-credit {
+    font-size: 0.75rem;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
 }

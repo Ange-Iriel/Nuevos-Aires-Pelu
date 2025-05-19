@@ -376,3 +376,174 @@ font-size: 20px;
   font-size: 0.9rem;
   color: #aaa;
 }
+
+/* -------------------- Responsive general -------------------- */
+@media (max-width: 1024px) {
+  .navbarH2 {
+    font-size: 40px;
+  }
+
+  .rutas_links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-size: 18px;
+  }
+
+  .presentacion {
+    margin: 3rem 1rem;
+  }
+
+  .presentacion h3 {
+    font-size: 30px;
+  }
+
+  .presentacion p {
+    font-size: 22px;
+  }
+
+  .presentacion2 {
+    font-size: 22px;
+    padding: 0 1rem;
+  }
+
+  .presentacion2 p {
+    margin: 4rem 1rem;
+  }
+
+  .dueños1 {
+    padding: 2rem 1rem;
+    margin: 2rem auto;
+  }
+
+  .dueños1 h3 {
+    font-size: 28px;
+  }
+
+  .dueños1 p {
+    font-size: 22px;
+  }
+
+  .presentacion_dueño {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbarH2 {
+    font-size: 32px;
+  }
+
+  .textoQuienesSomos {
+    font-size: 20px;
+    padding: 1rem;
+  }
+
+  .quienesTexto {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .buttonQuienesSomos {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+
+  .botton_turnoyprecio a {
+    font-size: 14px;
+  }
+
+  .cuadro {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer a {
+    font-size: 1.2rem;
+  }
+
+  .footer-credit {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 1rem;
+  }
+
+  .navbarH2 {
+    font-size: 26px;
+  }
+
+  .presentacion h3 {
+    font-size: 24px;
+  }
+
+  .presentacion p,
+  .presentacion2 {
+    font-size: 18px;
+  }
+
+  .presentacion2 p {
+    margin: 2rem 1rem;
+  }
+
+  .quienesTexto,
+  .textoQuienesSomos {
+    font-size: 18px;
+  }
+
+  .rutas_links {
+    gap: 0.8rem;
+    font-size: 16px;
+  }
+
+  .footer-content {
+    padding: 0 1rem;
+  }
+
+  .cuadro {
+    width: 70px;
+    height: 70px;
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+}
