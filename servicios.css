@@ -1,40 +1,3 @@
-/* Fonts desde Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Quicksand:wght@400&display=swap');
-
-body {
-    background-color: #1f2629;
-    color: rgb(224, 253, 231);
-}
-
-/*h1*/
-.parkinsans-regular {
-    font-family: "Parkinsans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400; /*según la variante */
-    font-style: normal;
-}
-/*h2*/
-.poiret-one-regular {
-    font-family: "Poiret One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-/*h3*/
-.quicksand {
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-  }
-/*texto botton*/
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
-
 body {
     background-color: #1f2629;
     color: rgb(224, 253, 231);
@@ -204,7 +167,7 @@ h4{
   justify-content: space-between;
   gap: 2rem;
   list-style: none;
- margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 .rutas_links a{
@@ -234,164 +197,84 @@ h4{
 }
 
 
-.presentacion {
-  margin: 7rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center; /* Centra el texto dentro de los elementos */
- 
-}
-
-.presentacion h3 {
-  font-size: 40px;
-  margin: 10px 0;
-}
-
-.presentacion p {
-  font-size: 30px;
-  margin: 10px 0;
-}
-
-.dueños1 {
-  background-color: #5d5e8b;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  padding: 3rem;
-  margin: 3rem auto;
-  border-radius: 20px;
-  gap: 2rem;
-  max-width: 1200px;
-}
-.dueños1 h3{
-  font-size: 35px;
-}
-.dueños1 p{
-  font-size: 30px;
-}
-/* Imagen: estilo base */
-.dueños1 img {
-  width: 300px;
-  height: auto;
-  border-radius: 20px;
-  flex-shrink: 0;
-}
-
-/* Para cuando queremos que la imagen esté a la derecha */
-.dueños1.img-derecha {
-  flex-direction: row;
-}
-
-.dueños1.img-derecha img {
-  margin-left: auto;
-}
-
-.presentacion_dueño {
-  font-family: "Quicksand", sans-serif;
-  font-size: 18px;
-  color: #fff;
-  max-width: 700px;
-  text-align: left;
-}
-
-/* Responsive para móviles */
-@media (max-width: 768px) {
-  .dueños1,
-  .dueños1.img-derecha {
+.exposcion{
+    display: flex;
+    justify-content: center;
     flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-
-  .presentacion_dueño {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .dueños1.img-derecha img {
-    margin-left: 0;
-  }
 }
-
-
-.presentacion2{
-  font-size: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.presentacion2 p{
-  margin: 7rem;
+.exposcion h3{
+      margin: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center; 
+  font-size: 40px;
+}
+.exposcion p{
+      margin: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  font-size: 30px;
 }
 
-/* Footer */
+.descripcion{
+    
+}
+
+.descripcion h3{
+    font-size: 30px;
+}
+
+.descripcion p{
+    font-size: 25px;
+}
+
+
+
 .footer {
-    margin-top: 25px;
-    background-color: #111;
-    color: white;
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    flex-direction: column;
+    align-items: center;     /* centra horizontalmente */
+    justify-content: center; /* centra verticalmente */
     text-align: center;
-    padding: 20px;
-    font-family: "Quicksand", sans-serif;
+    
 }
 
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column; /* apila los elementos verticalmente */
+  align-items: center;    /* centra horizontalmente */
+  gap: 15px;
+  margin-bottom: 10px
 }
 
 .footer a {
-    color: white;
-    margin: 0 10px;
-    font-size: 1.5rem;
-    transition: transform 0.3s ease;
-    text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 .footer a:hover {
-    transform: scale(1.2);
-    color: #5d5e8b;
+  transform: scale(1.2);
+  color: #5d5e8b;
 }
 
 .footer-credit {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #aaa;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #aaa;
 }
-
-/* Cuadros en estilo */
-.cuadro {
-    display: block;
-    position: relative;
-    background-color: #4e5b62;
-    border-radius: 8px;
-    width: 100px;
-    height: 100px;
-    transition: all 0.3s ease;
-}
-
-.cuadro:hover {
-    background-color: #5c6d73;
-}
-
-.cuadro::after {
-    content: '';
-    position: absolute;
-    bottom: -25px;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    visibility: hidden;
-    color: white;
-}
-
-
